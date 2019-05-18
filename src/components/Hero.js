@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import HeroImg from '../assets/hero.svg';
+
 class Hero extends Component {
   componentDidMount() {
     const clouds = [
@@ -12,11 +14,11 @@ class Hero extends Component {
       document.getElementById('Cloud-5'),
       document.getElementById('Cloud-6'),
     ];
-    console.log(clouds);
+    console.log.apply(clouds);
   }
 
   render() {
-    return <h1>HERO</h1>;
+    return <HeroImg />;
   }
 }
 
