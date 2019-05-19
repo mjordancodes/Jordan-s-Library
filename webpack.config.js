@@ -24,6 +24,10 @@ module.exports = {
           loader: 'svg-react-loader',
         },
       },
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      },
     ],
   },
   resolve: { extensions: ['*', '.js', '.jsx'] },

@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Nav from './components/Nav';
+import './app.css';
+
+// import Nav from './components/Nav';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -13,7 +15,7 @@ class AppRouter extends Component {
     return (
       <Router>
         <div>
-          <Nav />
+          {/* <Nav /> */}
 
           <Switch>
             <Route path="/" exact component={Home} />
