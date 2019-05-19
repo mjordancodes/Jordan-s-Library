@@ -13,6 +13,7 @@
   "rules": {
     "react/prefer-stateless-function": "off",
     "react/jsx-filename-extension": "off",
-    "prettier/prettier": "error" 
+    "prettier/prettier": "error",
+    "no-plusplus": "off"
   }
 }
