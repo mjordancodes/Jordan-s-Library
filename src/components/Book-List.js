@@ -1,9 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styled from '@emotion/styled';
 
 import BookCard from './Book-Card';
-
-import books from '../books-data';
 
 const BookGrid = styled.div`
   display: grid;
@@ -11,7 +10,7 @@ const BookGrid = styled.div`
   grid-gap: 15px;
 `;
 
-function BookList() {
+function BookList({ books }) {
   return (
     <BookGrid>
       {books.map(book => (
