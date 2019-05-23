@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 
@@ -14,10 +13,25 @@ const SearchForm = styled.aside`
 class Home extends Component {
   state = {
     books: booksdata,
+    searchQuery: ' ',
+  };
+
+  updateQuery = searchQuery => {
+    this.setState(() => ({
+      searchQuery,
+    }));
   };
 
   render() {
-    const { books } = this.state;
+    const { books, searchQuery } = this.state;
+
+    const shownBooks = books.filter(book =>
+      book.title.toLowerCase().includes('a')
+    );
+
+    console.log('result: ', shownBooks);
+    console.log('search: ', searchQuery);
+
     return (
       <div>
         <Hero />
@@ -25,9 +39,16 @@ class Home extends Component {
           <SearchForm>
             <label>
               Search:
-              <input id="search" name="search" type="text" />
+              <input
+                id="search"
+                name="search"
+                type="text"
+                value={searchQuery}
+                onChange={event => this.updateQuery(event.target.value)}
+              />
             </label>
           </SearchForm>
+          <p>{searchQuery}</p>
           <BookList books={books} />
         </main>
       </div>

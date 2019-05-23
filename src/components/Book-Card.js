@@ -35,7 +35,26 @@ class BookCard extends Component {
 }
 
 BookCard.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  book: PropTypes.object.isRequired,
+  book: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    series: PropTypes.shape({
+      series: PropTypes.string.isRequired,
+      order: PropTypes.number.isRequired,
+    }),
+    author: PropTypes.shape({
+      first: PropTypes.string.isRequired,
+      last: PropTypes.string.isRequired,
+    }).isRequired,
+    cover: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    pages: PropTypes.number.isRequired,
+    dates: PropTypes.arrayOf(
+      PropTypes.shape({
+        start: PropTypes.dates,
+        end: PropTypes.dates,
+      })
+    ),
+    isRead: PropTypes.bool,
+  }).isRequired,
 };
 export default BookCard;
