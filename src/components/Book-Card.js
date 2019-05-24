@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 const Card = styled.div`
   display: grid;
@@ -21,15 +22,18 @@ const Title = styled.span`
 class BookCard extends Component {
   render() {
     const { book } = this.props;
+    const slug = book.title.toLowerCase().replace(/[^A-Z0-9]+/gi, '-');
     return (
-      <Card>
-        <img src={book.cover} alt={`Cover of ${book.title}`} />
-        <p>
-          <Title>{book.title}</Title>
-          <br />
-          {`${book.author.first} ${book.author.last}`}
-        </p>
-      </Card>
+      <Link to={`/book/?${slug}`}>
+        <Card>
+          <img src={book.cover} alt={`Cover of ${book.title}`} />
+          <p>
+            <Title>{book.title}</Title>
+            <br />
+            {`${book.author.first} ${book.author.last}`}
+          </p>
+        </Card>
+      </Link>
     );
   }
 }
