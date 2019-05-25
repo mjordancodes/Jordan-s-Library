@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import BookDetails from './pages/Book-Details';
 import PageNotFound from './pages/404';
+import Author from './pages/Author';
 
 class AppRouter extends Component {
   render() {
@@ -25,6 +26,12 @@ class AppRouter extends Component {
               path="/book/"
               render={({ match, location }) => (
                 <BookDetails match={match} location={location} />
+              )}
+            />
+            <Route
+              path="/author/"
+              render={({ match, location }) => (
+                <Author match={match} location={location} />
               )}
             />
             <Route component={PageNotFound} />

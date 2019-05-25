@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Nav from '../components/Nav';
 
@@ -46,6 +47,13 @@ class BookDetails extends Component {
       )
       .shift();
 
+    const slug = `${shownBook.author.first
+      .toLowerCase()
+      .replace(
+        /[^A-Z0-9]+/gi,
+        '-'
+      )}-${shownBook.author.last.toLowerCase().replace(/[^A-Z0-9]+/gi, '-')}`;
+
     return (
       <div>
         <Nav />
@@ -57,7 +65,9 @@ class BookDetails extends Component {
               <h2>
                 {shownBook.title}
                 <br />
-                {shownBook.author.first} {shownBook.author.last}
+                <Link to={`/author/?${slug}`}>
+                  {shownBook.author.first} {shownBook.author.last}
+                </Link>
               </h2>
               {shownBook.series && (
                 <h3>
