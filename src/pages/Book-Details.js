@@ -29,9 +29,6 @@ const Info = styled.div`
       font-weight: normal;
     }
   }
-  ul li span {
-    font-weight: bold;
-  }
 `;
 
 class BookDetails extends Component {
@@ -76,19 +73,17 @@ class BookDetails extends Component {
               )}
             </header>
             <ul>
-              <li>
-                <span>Genre: </span> {shownBook.genre}
-              </li>
-              <li>
-                <span>Pages: </span> {shownBook.pages}
-              </li>
-              {shownBook.isRead || shownBook.dates ? (
-                <li>
-                  <span>Status:</span> Read
-                </li>
+              <li>Genre: {shownBook.genre}</li>
+              <li>Pages:{shownBook.pages}</li>
+              {shownBook.read ? (
+                <li>Status: Read</li>
               ) : (
                 <li>
-                  <span>Status:</span> Want to Read
+                  {shownBook.dates ? (
+                    <span>Status: Reading({shownBook.dates[0].start})</span>
+                  ) : (
+                    <span>Status: Want to Read</span>
+                  )}
                 </li>
               )}
             </ul>

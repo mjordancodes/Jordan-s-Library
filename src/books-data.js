@@ -12,6 +12,7 @@ export default [
     cover: '/covers/winters-heart.jpg',
     genre: 'Epic Fantasy',
     pages: 800,
+    read: true,
     dates: [
       {
         start: '09/28/2018',
@@ -32,6 +33,7 @@ export default [
     cover: '/covers/crossroads-of-twilight.jpg',
     genre: 'Epic Fantasy',
     pages: 846,
+    read: true,
     dates: [
       {
         start: '10/09/2018',
@@ -52,6 +54,7 @@ export default [
     cover: '/covers/knife-of-dreams.jpg',
     genre: 'Epic Fantasy',
     pages: 880,
+    read: true,
     dates: [
       {
         start: '12/08/2018',
@@ -72,6 +75,7 @@ export default [
     cover: '/covers/the-gathering-storm.jpg',
     genre: 'Epic Fantasy',
     pages: 1120,
+    read: true,
     dates: [
       {
         start: '01/28/2019',
@@ -92,6 +96,7 @@ export default [
     cover: '/covers/towers-of-midnight.jpg',
     genre: 'Epic Fantasy',
     pages: 863,
+    read: true,
     dates: [
       {
         start: '02/27/2019',
@@ -112,6 +117,7 @@ export default [
     cover: '/covers/a-memory-of-light.jpg',
     genre: 'Epic Fantasy',
     pages: 912,
+    read: true,
     dates: [
       {
         start: '03/14/2019',
@@ -128,6 +134,7 @@ export default [
     cover: '/covers/svg-animations.jpg',
     genre: 'Technical',
     pages: 246,
+    read: true,
     dates: [
       {
         start: '12/09/2018',
@@ -144,6 +151,7 @@ export default [
     cover: '/covers/the-design-of-everyday-things.jpg',
     genre: 'Design',
     pages: 288,
+    read: true,
     dates: [
       {
         start: '04/07/2019',
@@ -160,6 +168,7 @@ export default [
     cover: '/covers/the-right-stuff.jpg',
     genre: 'Space History',
     pages: 369,
+    read: true,
     dates: [
       {
         start: '04/18/2019',
@@ -176,6 +185,7 @@ export default [
     cover: '/covers/the-secret-lives-of-colors.jpg',
     genre: 'Art',
     pages: 320,
+    read: false,
     dates: [
       {
         start: '12/11/2018',
@@ -196,6 +206,7 @@ export default [
     cover: '/covers/the-tao-of-pooh.jpg',
     genre: 'Philosophy',
     pages: 158,
+    read: true,
     dates: [
       {
         start: '09/01/2018',
